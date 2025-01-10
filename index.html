@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Website: divinectorweb.com
+    Subscribe Us: https://www.youtube.com/c/Divinector 
+    Support Us: https://www.buymeacoffee.com/divinector
+-->    
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMC LCEPL</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="form-box">
+        <div class="wrapper">
+            <!-- Images Area -->
+            <div class="img-area">
+                <img src="1.png" alt="PNG Image">
+                <!-- <img src="LCEPL.gif" alt="GIF Image"> -->
+                <div class="img-area carousel">
+                    <img src="01.jpg" alt="Image 1" class="carousel-img active">
+                    <img src="02.jpg" alt="Image 2" class="carousel-img">
+                    <img src="03.jpg" alt="Image 3" class="carousel-img">
+                    <img src="04.jpg" alt="Image 4" class="carousel-img">
+                </div>
+
+            </div>
+            <!-- Form Area -->
+            <div class="form-area">
+                <h3>PMC Login</h3>
+                <form>
+                    <div class="single-form">
+                        <input type="text" placeholder="Username" />
+                    </div>
+                    <div class="single-form">
+                        <input type="password" placeholder="Password" />
+                    </div>
+                    <div class="form-link" style="margin-bottom: 20px;">
+                        <a href="#" class="forgot-pass" style="color: rgb(31, 134, 244);">Forgot password?</a>
+                    </div>
+                    <input type="submit" value="Login"/>
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link" style="color: rgb(31, 134, 244);">Signup</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.carousel-img');
+        let currentIndex = 0;
+    
+        function showNextImage() {
+            // Hide current image
+            images[currentIndex].classList.remove('active');
+            images[currentIndex].style.opacity = 0;
+    
+            // Move to the next image
+            currentIndex = (currentIndex + 1) % images.length;
+    
+            // Show the next image
+            images[currentIndex].classList.add('active');
+            images[currentIndex].style.opacity = 1;
+        }
+    
+        // Automatically change images every 3 seconds
+        setInterval(showNextImage, 3000);
+    </script>
+    
+</body>
+</html>
